@@ -31,5 +31,15 @@ namespace Hourly_Pay_Sorter
             this.employeeTableAdapter.Fill(this.employeeDataSet.Employee);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.employeeTableAdapter.FillByAscendingOrder(this.employeeDataSet.Employee);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.employeeTableAdapter.FillByDescendingOrder(this.employeeDataSet.Employee);
+        }
     }
 }

@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.employeeDataSet = new Hourly_Pay_Sorter.EmployeeDataSet();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new Hourly_Pay_Sorter.EmployeeDataSetTableAdapters.EmployeeTableAdapter();
-            this.tableAdapterManager = new Hourly_Pay_Sorter.EmployeeDataSetTableAdapters.TableAdapterManager();
             this.employeeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,38 +44,22 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.employeeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeDataSet = new Hourly_Pay_Sorter.EmployeeDataSet();
+            this.employeeTableAdapter = new Hourly_Pay_Sorter.EmployeeDataSetTableAdapters.EmployeeTableAdapter();
+            this.tableAdapterManager = new Hourly_Pay_Sorter.EmployeeDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).BeginInit();
             this.employeeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // employeeDataSet
-            // 
-            this.employeeDataSet.DataSetName = "EmployeeDataSet";
-            this.employeeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.employeeDataSet;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EmployeeTableAdapter = this.employeeTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Hourly_Pay_Sorter.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // employeeBindingNavigator
             // 
@@ -138,6 +118,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -146,14 +127,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -161,7 +142,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -170,13 +151,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -193,7 +174,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // employeeBindingNavigatorSaveItem
@@ -201,7 +182,7 @@
             this.employeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.employeeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeBindingNavigatorSaveItem.Image")));
             this.employeeBindingNavigatorSaveItem.Name = "employeeBindingNavigatorSaveItem";
-            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.employeeBindingNavigatorSaveItem.Text = "Save Data";
             this.employeeBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeeBindingNavigatorSaveItem_Click);
             // 
@@ -219,6 +200,26 @@
             this.employeeDataGridView.Name = "employeeDataGridView";
             this.employeeDataGridView.Size = new System.Drawing.Size(461, 290);
             this.employeeDataGridView.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 351);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(225, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Sort Ascending";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(248, 351);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(225, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Sort Descending";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -245,23 +246,25 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Hourly_Pay_Rate";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // button1
+            // employeeBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(13, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Sort Ascending";
-            this.button1.UseVisualStyleBackColor = true;
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.employeeDataSet;
             // 
-            // button2
+            // employeeDataSet
             // 
-            this.button2.Location = new System.Drawing.Point(248, 351);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Sort Descending";
-            this.button2.UseVisualStyleBackColor = true;
+            this.employeeDataSet.DataSetName = "EmployeeDataSet";
+            this.employeeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EmployeeTableAdapter = this.employeeTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Hourly_Pay_Sorter.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // MainForm
             // 
@@ -275,12 +278,12 @@
             this.Name = "MainForm";
             this.Text = "Hourly Pay Sorter";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).EndInit();
             this.employeeBindingNavigator.ResumeLayout(false);
             this.employeeBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
